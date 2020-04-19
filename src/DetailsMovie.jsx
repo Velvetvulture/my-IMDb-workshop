@@ -70,9 +70,6 @@ const CreditSummary = styled.div`
     display: inline;
   }
 `;
-const PosterDiv = styled.div`
-  color: black;
-`;
 const ModalVideoDiv = styled.div`
   position: absolute;
   left: 50%;
@@ -140,7 +137,20 @@ const DivWithTheCircle = styled.div`
   bottom: 110px;
   z-index: 1;
 `;
-
+const NetflixLinkButton = styled.button`
+  border: 0;
+  background-color: red;
+  font-family: inherit;
+  margin: 10px 0;
+  font-size: 100%;
+  /* color: rgba(0, 0, 0, 0.87); */
+  color: white;
+  padding: 10px;
+  outline: none;
+  :hover {
+    background-color: rgba(255, 0, 0, 0.65);
+  }
+`;
 class DetailsMovie extends Component {
   constructor() {
     super();
@@ -305,7 +315,7 @@ class DetailsMovie extends Component {
             <div>
               {stream && (
                 <a href="https://www.netflix.com/ca/" target="_blank">
-                  <button>Visit Netflix</button>
+                  <NetflixLinkButton>Visit {stream}</NetflixLinkButton>
                 </a>
               )}
             </div>

@@ -271,7 +271,7 @@ const listOfMovies = [
 const listOfStreaming = [
   {
     id: "y0",
-    stream: true,
+    stream: "Netflix",
     title: "Extraction",
     year: "2020",
     rating: "R",
