@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
 import RibbonButton from "./Components/RibbonButton.jsx";
+import StreamingButton from "./Components/StreamingButton.jsx";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -313,11 +314,7 @@ class DetailsMovie extends Component {
               <h4>Stars: </h4> {mainStars}
             </CreditSummary>
             <div>
-              {stream && (
-                <a href="https://www.netflix.com/ca/" target="_blank">
-                  <NetflixLinkButton>Visit {stream}</NetflixLinkButton>
-                </a>
-              )}
+              <StreamingButton stream={stream} />
             </div>
           </MovieInfoBar>
         </Main>

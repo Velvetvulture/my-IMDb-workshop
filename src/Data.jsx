@@ -290,7 +290,7 @@ const listOfStreaming = [
   },
   {
     id: "y1",
-    stream: true,
+    stream: "Netflix",
     title: "The Witcher",
     year: "2019-",
     rating: "TV-MA",
@@ -309,7 +309,7 @@ const listOfStreaming = [
   },
   {
     id: "y2",
-    stream: true,
+    stream: "Netflix",
     title: "Ozark",
     year: "2017-",
     rating: "TV-MA",
@@ -328,7 +328,7 @@ const listOfStreaming = [
   },
   {
     id: "y3",
-    stream: true,
+    stream: "Amazon Prime Video",
     title: "The Expanse",
     year: "2015-",
     rating: "TV-14",
