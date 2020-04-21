@@ -11,7 +11,7 @@ import { withStyles } from "@material-ui/core/styles";
 const MovieDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 5px;
+  grid-gap: 10px;
   position: relative;
 `;
 const ImageInTheModal = styled.img`
@@ -24,7 +24,7 @@ const ImageInTheModal = styled.img`
 const MovieWrapper = styled.div`
   /* transition: transform 0.2s ease-in-out 0s; */
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: whitesmoke;
+  background-color: rgb(29, 29, 29);
   height: 390px;
 `;
 const MovieButton = styled.button`
@@ -51,6 +51,7 @@ const TitleStyle = styled.div`
   font-size: 0.9rem;
   font-weight: bold;
   margin-top: 8px;
+  color: white;
   margin-left: 5px;
   border: none;
   height: 40px;
@@ -119,7 +120,7 @@ const RentOrBuyWrapperDiv = styled.div`
   }
 `;
 const DivWithTheButton = styled.div`
-  padding: 0px 5px;
+  padding: 0px 10px;
   border: none;
 `;
 const WatchOptionsButton = styled.button`
@@ -131,12 +132,12 @@ const WatchOptionsButton = styled.button`
   box-sizing: border-box;
   font-weight: 500;
   height: 30px;
-  background-color: #1a1a1ad4;
+  background-color: rgb(59, 59, 59);
   outline: none;
   border-radius: 4px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   :hover {
-    background-color: #1a1a1a99;
+    background-color: rgba(59, 59, 59, 0.65);
   }
 `;
 
