@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import { listOfMovies, listOfStreaming } from "../Data.jsx";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { withRouter } from "react-router-dom";
 
 const ResultsWrapper = styled.div`
   position: absolute;
@@ -40,7 +39,7 @@ const ActorsList = styled.div`
   color: #eeeeee;
   font-family: Arial, sans-serif;
 `;
-function SearchResults() {
+function SearchResults(props) {
   const query = useSelector((state) => state.searchQuery);
   let results = listOfMovies.concat(listOfStreaming).filter((movie) => {
     return movie.title.toLowerCase().includes(query.toLowerCase());
@@ -57,7 +56,11 @@ function SearchResults() {
                   <img height="150px" src={movie.poster} />
                 </PictureDiv>
                 <MovieInfoDiv>
-                  <Link className="title-link" to={"/movie/" + movie.id}>
+                  <Link
+                    className="title-link"
+                    to={"/movie/" + movie.id}
+                    onClick={() => props.clicked()}
+                  >
                     {movie.title}
                   </Link>
                   <SubTitleBar>

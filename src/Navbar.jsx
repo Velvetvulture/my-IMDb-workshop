@@ -275,7 +275,7 @@ export default function PrimarySearchAppBar(props) {
             />
             {focus && (
               <>
-                <SearchResults />
+                <SearchResults clicked={() => handleFocus(false)} />
                 <SearchResultsOverlay onClick={() => handleFocus(false)} />
               </>
             )}

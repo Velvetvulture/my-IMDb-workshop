@@ -138,20 +138,7 @@ const DivWithTheCircle = styled.div`
   bottom: 110px;
   z-index: 1;
 `;
-const NetflixLinkButton = styled.button`
-  border: 0;
-  background-color: red;
-  font-family: inherit;
-  margin: 10px 0;
-  font-size: 100%;
-  /* color: rgba(0, 0, 0, 0.87); */
-  color: white;
-  padding: 10px;
-  outline: none;
-  :hover {
-    background-color: rgba(255, 0, 0, 0.65);
-  }
-`;
+
 class DetailsMovie extends Component {
   constructor() {
     super();
