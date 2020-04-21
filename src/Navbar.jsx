@@ -233,7 +233,11 @@ export default function PrimarySearchAppBar(props) {
     <div className={classes.grow}>
       <AppBar
         position="relative" // Initially "static" but static is below relative
-        style={{ backgroundColor: "black", height: "58px" }}
+        style={{
+          backgroundColor: "black",
+          height: "58px",
+          padding: "0 160px",
+        }}
       >
         <Toolbar>
           <IconButton

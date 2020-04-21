@@ -177,6 +177,25 @@ const listOfMovies = [
     poster: "/Jurassic Park.jpg",
   },
   {
+    id: "x10",
+    stream: false,
+    title: "A Clockwork Orange",
+    year: "1971",
+    rating: "R",
+    runningTime: "2h 16min",
+    type: "Crime, Drama, Sci-Fi",
+    pictures: [],
+    director: "Stanley Kubrick",
+    mainStars: "Malcolm McDowell, Patrick Magee, Michael Bates",
+    summary:
+      "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.",
+    videoPoster:
+      "https://m.media-amazon.com/images/M/MV5BNmJmYzU5ZTMtNGM2My00ODk5LWI0Y2MtZjQ5NTMxZDhkZDc2XkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SY1000_CR0,0,1655,1000_AL_.jpg",
+    video: "",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+  },
+  {
     id: "x7",
     stream: false,
     title: "Citizen Kane",
@@ -231,25 +250,6 @@ const listOfMovies = [
       "https://m.media-amazon.com/images/M/MV5BMTY2NzE4OTE4Nl5BMl5BanBnXkFtZTcwNTY0NzY2NA@@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
     video: "",
     poster: "/Memento.jpg",
-  },
-  {
-    id: "x10",
-    stream: false,
-    title: "A Clockwork Orange",
-    year: "1971",
-    rating: "R",
-    runningTime: "2h 16min",
-    type: "Crime, Drama, Sci-Fi",
-    pictures: [],
-    director: "Stanley Kubrick",
-    mainStars: "Malcolm McDowell, Patrick Magee, Michael Bates",
-    summary:
-      "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.",
-    videoPoster:
-      "https://m.media-amazon.com/images/M/MV5BNmJmYzU5ZTMtNGM2My00ODk5LWI0Y2MtZjQ5NTMxZDhkZDc2XkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SY1000_CR0,0,1655,1000_AL_.jpg",
-    video: "",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
     id: "x11",
