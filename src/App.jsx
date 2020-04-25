@@ -1,8 +1,6 @@
 import React, { Component, useState } from "react";
 import { listOfMovies, listOfStreaming } from "./Data.jsx";
-import SearchResults from "./Components/SearchResults.jsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import Watchlist from "./Watchlist.jsx";
@@ -68,10 +66,20 @@ class App extends Component {
     const movie = this.state.movies.find((movie) => {
       return movie.id === movieId;
     });
+    const isInWatchlist = this.state.watchlist.find((movie) => {
+      return movie.id === movieId;
+    });
+    console.log("Watchlist", Watchlist);
     if (movie === undefined) return <div>No movie found</div>;
     return (
       <div>
-        <DetailsMovie movie={movie} addToWatchlist={this.addToWatchlist} />
+        <DetailsMovie
+          movie={movie}
+          isInWatchlist={isInWatchlist}
+          addToWatchlist={this.addToWatchlist}
+          removeMovie={this.removeMovie}
+          watchlist={this.state.watchlist}
+        />
       </div>
     );
   };

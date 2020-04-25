@@ -257,7 +257,7 @@ export default function PrimarySearchAppBar(props) {
           >
             IMDb
           </Typography>
-          <div className={classes.search} style={{ width: "531px" }}>
+          <div className={classes.search} style={{ width: "530px" }}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>

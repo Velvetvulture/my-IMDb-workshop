@@ -131,11 +131,12 @@ const WatchOptionsButton = styled.button`
   justify-content: center;
   box-sizing: border-box;
   font-weight: 500;
+  font-size: 15px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   height: 30px;
   background-color: rgb(59, 59, 59);
   outline: none;
   border-radius: 4px;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
   :hover {
     background-color: rgba(59, 59, 59, 0.65);
   }

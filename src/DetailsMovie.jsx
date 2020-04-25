@@ -142,10 +142,26 @@ const DivWithTheCircle = styled.div`
 class DetailsMovie extends Component {
   constructor() {
     super();
-    this.state = { showVideo: false, showPicture: false, currentPicture: 0 };
+    this.state = {
+      showVideo: false,
+      showPicture: false,
+      currentPicture: 0,
+    };
   }
   addToWatchlist = () => {
     this.props.addToWatchlist(this.props.movie);
+  };
+  removeMovie = (idx) => {
+    this.props.removeMovie(idx);
+  };
+  toggleWatchlist = () => {
+    const watchlist = this.props.watchlist;
+    const movie = this.props.movie;
+    const index = watchlist.indexOf(movie);
+    // if (!this.props.isInWatchlist) return this.addToWatchlist();
+    // if (this.props.isInWatchlist.id === this.props.movie.id)
+    if (!watchlist.includes(movie)) return this.addToWatchlist();
+    if (watchlist.includes(movie)) return this.removeMovie(index);
   };
   launchVideo = () => {
     this.setState({ showVideo: true });
@@ -199,8 +215,8 @@ class DetailsMovie extends Component {
         <Main>
           <TitleWrapper>
             <RibbonButton
-              onClick={this.addToWatchlist}
-              title="Click to add to Watchlist"
+              onClick={() => this.toggleWatchlist()}
+              isInWatchlist={this.props.isInWatchlist}
             />
             <TitleBar>
               {title}

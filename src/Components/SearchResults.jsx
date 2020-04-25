@@ -17,7 +17,7 @@ const MovieWrapper = styled.div`
   padding: 5px;
   border-bottom: 1px solid darkgray;
   background-color: #242121;
-  width: 521px;
+  width: 520px;
 `;
 const PictureDiv = styled.div`
   size: 100%;
@@ -41,7 +41,7 @@ const ActorsList = styled.div`
 `;
 function SearchResults(props) {
   const query = useSelector((state) => state.searchQuery);
-  let results = listOfMovies.concat(listOfStreaming).filter((movie) => {
+  const results = listOfMovies.concat(listOfStreaming).filter((movie) => {
     return movie.title.toLowerCase().includes(query.toLowerCase());
   });
 

@@ -30,6 +30,24 @@ const newMovies = [
     video: "https://www.youtube.com/embed/g4U4BQW9OEk?autoplay=1",
   },
 ];
+const criticallyAcclaimedMovies = [
+  {
+    id: "z0",
+    stream: false,
+    title: "",
+    year: "",
+    rating: "",
+    runningTime: "",
+    type: "",
+    pictures: [],
+    director: "",
+    mainStars: "",
+    summary: "",
+    videoPoster: "",
+    video: "",
+    poster: "",
+  },
+];
 const listOfMovies = [
   {
     id: "x0",
@@ -50,7 +68,7 @@ const listOfMovies = [
       "https://m.media-amazon.com/images/M/MV5BMTg3MDQ5NTgwOV5BMl5BanBnXkFtZTcwNzA0MzU5Ng@@._V1_SY1000_CR0,0,1551,1000_AL_.jpg",
     ],
     director: "Quentin Tarantino",
-    mainStars: " John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
+    mainStars: "John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
     summary:
       "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption",
     videoPoster:
