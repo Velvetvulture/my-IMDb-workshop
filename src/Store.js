@@ -12,6 +12,9 @@ let reducer = (state, action) => {
   if (action.type === "query") {
     return { ...state, searchQuery: action.q };
   }
+  if (action.type === "clear-searchBar") {
+    return { ...state, searchQuery: "" };
+  }
   return state;
 };
 

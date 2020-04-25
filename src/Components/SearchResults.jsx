@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import React, { Component } from "react";
 import { listOfMovies, listOfStreaming } from "../Data.jsx";
 import styled from "styled-components";
@@ -40,11 +40,15 @@ const ActorsList = styled.div`
   font-family: Arial, sans-serif;
 `;
 function SearchResults(props) {
+  const dispatch = useDispatch();
   const query = useSelector((state) => state.searchQuery);
   const results = listOfMovies.concat(listOfStreaming).filter((movie) => {
     return movie.title.toLowerCase().includes(query.toLowerCase());
   });
-
+  const handleClick = () => {
+    props.clicked();
+    dispatch({ type: "clear-searchBar" });
+  };
   return (
     <ResultsWrapper>
       {query !== "" &&
@@ -59,7 +63,7 @@ function SearchResults(props) {
                   <Link
                     className="title-link"
                     to={"/movie/" + movie.id}
-                    onClick={() => props.clicked()}
+                    onClick={handleClick}
                   >
                     {movie.title}
                   </Link>
