@@ -38,6 +38,12 @@ const GoogleSignoutButton = styled.button`
   padding: 0;
   outline: none;
 `;
+const Watchlist = styled.span`
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+`;
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -58,6 +64,35 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid yellow",
     paddingRight: "4px",
     paddingLeft: "4px",
+    "&:hover": {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+  },
+  watchlist: {
+    display: "none",
+    borderRadius: theme.shape.borderRadius,
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+    fontWeight: "bold",
+    border: "none",
+    padding: "0 4px 0 8px",
+    "&:hover": {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+  },
+  iconButton: {
+    display: "none",
+    textTransform: "none",
+    fontSize: "0.95rem",
+    border: "none",
+    borderRadius: "10px",
+    padding: "8px 4px",
+    margin: "0px",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+    fontWeight: "bold",
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
@@ -102,6 +137,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionDesktop: {
     display: "none",
+    height: "36px",
     [theme.breakpoints.up("md")]: {
       display: "flex",
     },
@@ -283,7 +319,12 @@ export default function PrimarySearchAppBar(props) {
           <div className={classes.grow} />
           {isLoggedIn ? (
             <div className={classes.sectionDesktop}>
-              <IconButton aria-label="show 4 new mails" color="inherit">
+              <IconButton
+                aria-label="show 4 new mails"
+                color="inherit"
+                className={classes.watchlist}
+              >
+                <Watchlist>Watchlist</Watchlist>
                 <Badge badgeContent={props.watchlistSize} color="secondary">
                   {/* <MailIcon /> */}
                   <svg
@@ -297,7 +338,7 @@ export default function PrimarySearchAppBar(props) {
                   >
                     <path
                       d="M17 3c1.05 0 1.918.82 1.994 1.851L19 5v16l-7-3-7 3V5c0-1.05.82-1.918 1.851-1.994L7 3h10zm-4 4h-2v3H8v2h3v3h2v-3h3v-2h-3V7z"
-                      fill="currentColor"
+                      fill="lightgrey" //"currentColor"
                     ></path>
                   </svg>
                 </Badge>
@@ -315,15 +356,7 @@ export default function PrimarySearchAppBar(props) {
                 aria-label="account of current user"
                 aria-controls={menuId}
                 aria-haspopup="true"
-                className={classes.title}
-                style={{
-                  textTransform: "none",
-                  fontSize: "0.95rem",
-                  border: "none",
-                  borderRadius: "30px",
-                  padding: "8px 4px",
-                  margin: "0px",
-                }}
+                className={classes.iconButton}
                 onClick={handleProfileMenuOpen}
                 color="inherit"
               >

@@ -1,4 +1,3 @@
-import { connect } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
 import React, { Component } from "react";
 import { listOfMovies, listOfStreaming } from "../Data.jsx";
