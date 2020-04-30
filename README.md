@@ -1,4 +1,4 @@
-![Homepage](screenshots/Buy_it.jpg)
+![Homepage](screenshots/Home_page.png)
 
 # **IMDb**
 
