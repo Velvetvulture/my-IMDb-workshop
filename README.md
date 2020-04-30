@@ -43,6 +43,7 @@ Back-end: (To be implemented)
 (To come ...)
 
 ### **Screenshots**
-![Screnshots](screenshots/Rest_of_screen1.JPG)
+![Screenshots](screenshots/Rest_of_screen.JPEG)
+
 
 ![Screnshots](screenshots/Rest_of_screen2.JPG)
