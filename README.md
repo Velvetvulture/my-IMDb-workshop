@@ -44,3 +44,5 @@ Back-end: (To be implemented)
 
 ### **Screenshots**
 ![Screnshots](screenshots/Rest_of_screen1.JPG)
+
+![Screnshots](screenshots/Rest_of_screen2.JPG)
