@@ -1,4 +1,4 @@
-![Homepage](screenshots/Home_page.PNG)
+![Homepage](screenshots/Home_page.png)
 
 # **IMDb**
 
@@ -43,3 +43,4 @@ Back-end: (To be implemented)
 (To come ...)
 
 ### **Screenshots**
+![Screnshots](screenshots/Rest_of_screen1.JPG)
