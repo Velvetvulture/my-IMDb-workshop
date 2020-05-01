@@ -6,6 +6,8 @@
 
 ### **Description**
 
+(Ongoing project)
+
 Web-based application helping users to find information related to films and television programs. Users are also given options on how to watch the films and shows.
 
 ### **Features**
