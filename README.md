@@ -49,3 +49,5 @@ Back-end: (To be implemented)
 ![Screenshot](screenshots/Rest_of_screen2.JPG)
 
 ![Screenshot](screenshots/Sign_in.JPG)
+
+![Screenshot](screenshots/Buy_or_Rent.JPG)
