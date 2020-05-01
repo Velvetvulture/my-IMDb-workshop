@@ -51,3 +51,13 @@ Back-end: (To be implemented)
 ![Screenshot](screenshots/Sign_in.JPG)
 
 ![Screenshot](screenshots/Buy_or_Rent.JPG)
+
+![Screenshot](screenshots/Detail_show.JPG)
+
+![Screenshot](screenshots/Detail_movie.JPG)
+
+![Screenshot](screenshots/Picture.JPG)
+
+![Screenshot](screenshots/Preview.JPG)
+
+![Screenshot](screenshots/Watchlist.JPG)
