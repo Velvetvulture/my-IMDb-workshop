@@ -101,7 +101,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BYmUxNjQ2ODgtODZjZS00YjBmLWJjOTYtZjlmMTVjYjRkYjQ2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,1333,1000_AL_.jpg",
     video: "https://www.youtube.com/embed/YqNYrYUiMfg?autoplay=1",
-    poster: "/1917.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904003/1917_k8iveh.jpg",
   },
   {
     id: "x2",
@@ -119,7 +120,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BNjIyODEzYTItZjY3Ny00MDRkLWEyMTQtNGUxOGM2ODdmYjRkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
     video: "https://www.youtube.com/embed/LjLamj-b0I8?autoplay=1",
-    poster: "/Alien.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904006/Alien_elegwp.jpg",
   },
   {
     id: "x3",
@@ -137,7 +139,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BMjA4MzI0NzI3MF5BMl5BanBnXkFtZTcwOTc4Mzg0OQ@@._V1_SY1000_SX1500_AL_.jpg",
     video: "",
-    poster: "/Back To The Future.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904005/Back_To_The_Future_kj1gfm.jpg",
   },
   {
     id: "x4",
@@ -155,7 +158,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BZDU0NTgwMGQtZDgwZS00YmQzLWE4Y2MtN2M1ZTYwNWNlMGVmXkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_.jpg",
     video: "",
-    poster: "/Forrest Gump.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904008/Forrest_Gump_fur370.jpg",
   },
   {
     id: "x5",
@@ -192,7 +196,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BOTdkMzA1NDItMDU4Ny00ZGRjLTg1MTEtNmZjYjdiMmY3YmY1XkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_SY1000_CR0,0,1701,1000_AL_.jpg",
     video: "",
-    poster: "/Jurassic Park.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904005/Jurassic_Park_odlp3h.jpg",
   },
   {
     id: "x10",
@@ -267,7 +272,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BMTY2NzE4OTE4Nl5BMl5BanBnXkFtZTcwNTY0NzY2NA@@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
     video: "",
-    poster: "/Memento.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904006/Memento_gbikew.jpg",
   },
   {
     id: "x11",
@@ -285,7 +291,8 @@ const listOfMovies = [
     videoPoster:
       "https://m.media-amazon.com/images/M/MV5BMTU4MTgxOTQ0Nl5BMl5BanBnXkFtZTgwNDI0Mjk1NDM@._V1_SX1375_CR0,0,1375,999_AL_.jpg",
     video: "",
-    poster: "/The Godfather.jpg",
+    poster:
+      "https://res.cloudinary.com/blackbonbon/image/upload/v1588904009/The_Godfather_piujtf.jpg",
   },
 ];
 const listOfStreaming = [
