@@ -34,6 +34,7 @@
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "chokidar": "^3.0.0",
+    "cloudinary-core": "^2.8.2",
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "history": "^4.10.1",
