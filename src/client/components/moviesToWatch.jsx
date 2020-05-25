@@ -2,8 +2,8 @@ import React, { Component, useState } from "react";
 import Modal from "@material-ui/core/Modal";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-import Checkout from "./checkout.jsx";
-import { listOfMovies } from "./Data.jsx";
+import Checkout from "./Checkout.jsx";
+import { listOfMovies } from "../../Data.jsx";
 
 const MovieDiv = styled.div`
   display: grid;

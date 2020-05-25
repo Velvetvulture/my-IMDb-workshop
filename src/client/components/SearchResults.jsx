@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { Component } from "react";
-import { listOfMovies, listOfStreaming } from "../Data.jsx";
+import { listOfMovies, listOfStreaming } from "../../Data.jsx";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 

@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import "./main.css";
 import App from "./App.jsx";
 import React from "react";
-import store from "./Store.js";
+import store from "./store/Store.js";
 import { Provider } from "react-redux";
 
 import reloadMagic from "./reload-magic-client.js"; // automatic reload

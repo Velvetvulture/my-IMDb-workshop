@@ -1,5 +1,4 @@
-import { createStore } from "redux";
-let reducer = (state, action) => {
+const reducer = (state, action) => {
   if (action.type === "login-success") {
     return { ...state, loggedIn: true, username: action.username };
   }
@@ -18,14 +17,4 @@ let reducer = (state, action) => {
   return state;
 };
 
-const store = createStore(
-  reducer,
-  {
-    loggedIn: false,
-    username: "",
-    searchQuery: "",
-  },
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
-export default store;
+export default reducer;

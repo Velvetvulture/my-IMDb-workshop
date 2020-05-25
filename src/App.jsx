@@ -3,13 +3,13 @@ import { listOfMovies, listOfStreaming } from "./Data.jsx";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 import { Route, BrowserRouter, Link } from "react-router-dom";
-import Watchlist from "./Watchlist.jsx";
+import Watchlist from "./client/pages/Watchlist.jsx";
 import NewTrailers from "./NewTrailers.jsx";
-import MoviesToWatch from "./moviesToWatch.jsx";
-import PrimarySearchAppBar from "./Navbar.jsx";
-import GoogleSignIn from "./GoogleSignIn.jsx";
-import DetailsMovie from "./DetailsMovie.jsx";
-import StreamingList from "./Components/StreamingList.jsx";
+import MoviesToWatch from "./client/components/moviesToWatch.jsx";
+import PrimarySearchAppBar from "./client/components/Navbar.jsx";
+import GoogleSignIn from "./client/pages/GoogleSignIn.jsx";
+import DetailsMovie from "./client/pages/DetailsMovie.jsx";
+import StreamingList from "./client/components/StreamingList.jsx";
 
 const SuperWrapper = styled.div`
   background-color: black;

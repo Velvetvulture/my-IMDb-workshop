@@ -19,7 +19,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { GoogleLogout } from "react-google-login";
-import SearchResults from "./Components/SearchResults.jsx";
+import SearchResults from "./SearchResults.jsx";
 import styled from "styled-components";
 
 const SearchResultsOverlay = styled.div`

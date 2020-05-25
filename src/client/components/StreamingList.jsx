@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import Modal from "@material-ui/core/Modal";
-import { listOfStreaming } from "../Data.jsx";
+import { listOfStreaming } from "../../Data.jsx";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 

@@ -1,8 +1,8 @@
 import React, { Component, useState } from "react";
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
-import RibbonButton from "./Components/RibbonButton.jsx";
-import StreamingButton from "./Components/StreamingButton.jsx";
+import RibbonButton from "../components/RibbonButton.jsx";
+import StreamingButton from "../components/StreamingButton.jsx";
 
 const Wrapper = styled.div`
   height: 100vh;
