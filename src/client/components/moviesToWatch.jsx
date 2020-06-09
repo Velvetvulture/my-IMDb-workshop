@@ -11,13 +11,6 @@ const MovieDiv = styled.div`
   grid-gap: 10px;
   position: relative;
 `;
-const ImageInTheModal = styled.img`
-  margin: 20px;
-  :hover {
-    filter: brightness(0.8);
-  }
-  cursor: pointer;
-`;
 const MovieWrapper = styled.div`
   /* transition: transform 0.2s ease-in-out 0s; */
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -95,6 +88,13 @@ const MainDivMOdal = styled.div`
   & > button {
     margin-right: 8px;
   }
+`;
+const ImageInTheModal = styled.img`
+  margin: 20px;
+  :hover {
+    filter: brightness(0.8);
+  }
+  cursor: pointer;
 `;
 const RentOrBuyWrapperDiv = styled.div`
   margin: 15px;

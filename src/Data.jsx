@@ -348,7 +348,7 @@ const listOfStreaming = [
     summary:
       "A financial adviser drags his family from Chicago to the Missouri Ozarks, where he must launder money to appease a drug boss.",
     videoPoster:
-      "https://m.media-amazon.com/images/M/MV5BN2M4MDEzZTQtYWQzZC00YTAzLTk2OGQtN2JmOWE1YWRhMDMyXkEyXkFqcGdeQXVyMjkwMzMxODg@._V1_SX1777_CR0,0,1777,820_AL_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMTg3ZmY2ZjQtZWQzMi00MTM5LThiNWQtOWExOWYyY2RiYjE3XkEyXkFqcGdeQXVyMjkwMzMxODg@._V1_SY1000_CR0,0,1011,1000_AL_.jpg",
     video: "https://www.youtube.com/embed/oNDTOy5bU_4?autoplay=1",
     poster:
       "https://m.media-amazon.com/images/M/MV5BM2Q3MjQ3NDAtZDk4NS00MDIwLTllZGUtMmY1ZDU2OTJkNGY2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX675_AL_.jpg",
@@ -386,7 +386,7 @@ const listOfStreaming = [
     summary:
       "Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite can be indulged without consequence.",
     videoPoster:
-      "https://m.media-amazon.com/images/M/MV5BNWU1ZGNiMzItMDMyNy00ZTQwLWIzYTEtZWVlMzIwNTFjM2QyXkEyXkFqcGdeQXVyNjgzMjQ0MTA@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BODM1NTU5MDM1OF5BMl5BanBnXkFtZTgwNjAzNTAzMDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
     video: "https://www.youtube.com/embed/Q3NHl4qey3s?autoplay=1",
     poster:
       "https://m.media-amazon.com/images/M/MV5BMTRmYzNmOTctZjMwOS00ODZlLWJiZGQtNDg5NDY5NjE3MTczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",

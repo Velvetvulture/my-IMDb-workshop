@@ -13,19 +13,12 @@ const WrapperContentDiv = styled.div`
   grid-template-columns: 300px 1fr;
   grid-gap: 5px;
   position: relative;
+  height: 440px;
 `;
 const ImageDiv = styled.div`
   /* transition: transform 0.2s ease-in-out 0s; */
   font-family: Roboto, Helvetica, Arial, sans-serif;
   background-color: whitesmoke;
-`;
-const VideoDiv = styled.div`
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  :hover {
-    filter: brightness(0.9);
-  }
 `;
 const MovieButton = styled.button`
   padding: 0;
@@ -40,12 +33,20 @@ const MovieButton = styled.button`
   }
   & > img {
     width: 100%;
-    height: 440px;
+    /* height: 440px; */
     /* transition: transform 0.2s ease-in-out 0s; */
   }
   /* & > img:hover {
     transform: scale(1.1); 
   } */
+`;
+const VideoDiv = styled.div`
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  :hover {
+    filter: brightness(0.9);
+  }
 `;
 const BlackCloud = styled.div`
   background: black;
