@@ -7,6 +7,7 @@ const store = createStore(
     loggedIn: false,
     username: "",
     searchQuery: "",
+    newTrailers: [],
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

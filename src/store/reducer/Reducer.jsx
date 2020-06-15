@@ -14,6 +14,9 @@ const reducer = (state, action) => {
   if (action.type === "clear-searchBar") {
     return { ...state, searchQuery: "" };
   }
+  if (action.type === "newTrailers") {
+    return { ...state, newTrailers: action.newTrailers };
+  }
   return state;
 };
 

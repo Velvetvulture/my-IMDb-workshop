@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import { connect } from "react-redux";
 import { listOfMovies, listOfStreaming } from "./Data.jsx";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
@@ -27,6 +28,21 @@ class App extends Component {
       watchlist: [],
     };
   }
+  componentDidMount() {
+    this.fetchNewTrailers();
+  }
+  fetchNewTrailers = async () => {
+    let response = await fetch("/newTrailers");
+    let body = await response.text();
+    let parsed = JSON.parse(body);
+    if (parsed.success) {
+      console.log("newMovies from server", parsed.newTrailers);
+      this.props.dispatch({
+        type: "newTrailers",
+        newTrailers: parsed.newTrailers,
+      });
+    }
+  };
   addToWatchlist = (movie) => {
     this.setState({ watchlist: this.state.watchlist.concat(movie) });
   };
@@ -102,4 +118,4 @@ class App extends Component {
   };
 }
 
-export default App;
+export default connect()(App);

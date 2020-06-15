@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
-import { newMovies } from "./Data.jsx";
+import { connect } from "react-redux";
+import { newMovies } from "./Data.jsx"; // I'll erase this later when the component is fully connected
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
@@ -48,8 +49,8 @@ const ListDiv = styled.div`
 `;
 
 class NewTrailers extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showVideo: false,
       currentIndex: 3,
@@ -63,7 +64,7 @@ class NewTrailers extends Component {
     this.setState({ showVideo: false });
   };
   previousVideo = () => {
-    const lastIndex = newMovies.length - 1;
+    const lastIndex = this.props.newMovies.length - 1;
     if (this.state.currentIndex === 0) {
       this.setState({ currentIndex: lastIndex });
       return;
@@ -71,7 +72,7 @@ class NewTrailers extends Component {
     this.setState({ currentIndex: this.state.currentIndex - 1 });
   };
   nextVideo = () => {
-    const lastIndex = newMovies.length - 1;
+    const lastIndex = this.props.newMovies.length - 1;
     if (this.state.currentIndex === lastIndex) {
       this.setState({ currentIndex: 0 });
       return;
@@ -80,11 +81,11 @@ class NewTrailers extends Component {
   };
   render = () => {
     const previousIdx =
-      this.state.currentIndex == 0
-        ? newMovies.length - 1
+      this.state.currentIndex === 0
+        ? this.props.newMovies.length - 1
         : this.state.currentIndex - 1;
     const nextIdx = (this.state.currentIndex + 1) % newMovies.length;
-    console.log("newMovies", newMovies);
+    console.log("newMovies length", this.props.newMovies.length);
     return (
       <div>
         <div className="component-name">New trailers</div>
@@ -118,21 +119,19 @@ class NewTrailers extends Component {
                 object-fit="cover"
               />
             </div>
-            <div>
-              <button
-                onClick={() => {
-                  this.launchVideo(nextIdx);
-                }}
-                className="videobtn"
-              >
-                <img
-                  className="cover"
-                  src={newMovies[nextIdx].image}
-                  width="100%"
-                  height="100%"
-                  object-fit="cover"
-                />
-              </button>
+            <div
+              onClick={() => {
+                this.launchVideo(nextIdx);
+              }}
+              className="videobtn"
+            >
+              <img
+                className="cover"
+                src={newMovies[nextIdx].image}
+                width="100%"
+                height="100%"
+                object-fit="cover"
+              />
             </div>
           </ListDiv>
           <LeftButton onClick={this.previousVideo}>
@@ -189,54 +188,7 @@ class NewTrailers extends Component {
     );
   };
 }
-
-export default NewTrailers;
-<iframe
-  width="1519"
-  height="586"
-  src="https://www.youtube.com/embed/_qyw6LC5pnE"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
-
-<iframe
-  width="1519"
-  height="586"
-  src="https://www.youtube.com/embed/BIhNsAtPbPI"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
-<iframe
-  width="974"
-  height="557"
-  src="https://www.youtube.com/embed/XEMwSdne6UE"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
-<iframe
-  width="1519"
-  height="586"
-  src="https://www.youtube.com/embed/R228yPrwqTo"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
-<iframe
-  width="1519"
-  height="586"
-  src="https://www.youtube.com/embed/tlwzuZ9kOQU"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
-<iframe
-  width="1519"
-  height="586"
-  src="https://www.youtube.com/embed/tGpTpVyI_OQ"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
+let mapStateToProps = (state) => {
+  return { newMovies: state.newTrailers };
+};
+export default connect(mapStateToProps)(NewTrailers);
