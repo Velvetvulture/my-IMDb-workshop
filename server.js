@@ -26,14 +26,14 @@ app.get("/newTrailers", (req, res) => {
   dbo
     .collection("newMovies")
     .find({})
-    .toArray((err, ps) => {
+    .toArray((err, data) => {
       if (err) {
         console.log("error", err);
         res.send("fail");
         return;
       }
-      console.log("newTrailers", ps);
-      res.send(JSON.stringify({ success: true, newTrailers: ps }));
+      console.log("newTrailers", data);
+      res.send(JSON.stringify({ success: true, newTrailers: data }));
     });
 });
 // Your endpoints go before this line

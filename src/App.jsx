@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
 import { listOfMovies, listOfStreaming } from "./Data.jsx";
-import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import Watchlist from "./client/pages/Watchlist.jsx";

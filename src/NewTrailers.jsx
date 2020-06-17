@@ -1,7 +1,5 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
-import { newMovies } from "./Data.jsx"; // I'll erase this later when the component is fully connected
-import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
 
@@ -80,12 +78,15 @@ class NewTrailers extends Component {
     this.setState({ currentIndex: this.state.currentIndex + 1 });
   };
   render = () => {
+    if (!this.props.newMovies.length) {
+      return <div>LOADING</div>;
+    }
     const previousIdx =
       this.state.currentIndex === 0
         ? this.props.newMovies.length - 1
         : this.state.currentIndex - 1;
-    const nextIdx = (this.state.currentIndex + 1) % newMovies.length;
-    console.log("newMovies length", this.props.newMovies.length);
+    console.log("newMovies array", this.props.newMovies);
+    const nextIdx = (this.state.currentIndex + 1) % this.props.newMovies.length;
     return (
       <div>
         <div className="component-name">New trailers</div>
@@ -99,7 +100,7 @@ class NewTrailers extends Component {
             >
               <img
                 className="cover"
-                src={newMovies[previousIdx].image}
+                src={this.props.newMovies[previousIdx].image}
                 width="100%"
                 height="100%"
                 object-fit="cover"
@@ -113,7 +114,7 @@ class NewTrailers extends Component {
             >
               <img
                 className="cover"
-                src={newMovies[this.state.currentIndex].image}
+                src={this.props.newMovies[this.state.currentIndex].image}
                 width="100%"
                 height="100%"
                 object-fit="cover"
@@ -127,7 +128,7 @@ class NewTrailers extends Component {
             >
               <img
                 className="cover"
-                src={newMovies[nextIdx].image}
+                src={this.props.newMovies[nextIdx].image}
                 width="100%"
                 height="100%"
                 object-fit="cover"
@@ -161,7 +162,7 @@ class NewTrailers extends Component {
         </VideoDiv>
         {/* <button onClick={this.launchVideo} className="videobtn">
             <img
-              src={newMovies[0].image}
+              src={this.props.newMovies[0].image}
               width="100%"
               height="100%"
               object-fit="cover"
@@ -177,7 +178,7 @@ class NewTrailers extends Component {
             <iframe
               width="1250"
               height="650"
-              src={newMovies[this.state.currentVid].video} //from the state
+              src={this.props.newMovies[this.state.currentVid].video} //from the state
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
