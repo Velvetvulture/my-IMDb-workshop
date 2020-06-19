@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import Modal from "@material-ui/core/Modal";
-import { listOfStreaming } from "../../Data.jsx";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 
@@ -121,11 +120,11 @@ class StreamingList extends Component {
   }
 
   previousShow = () => {
-    if (!listOfStreaming[this.state.currentShow - 1]) return;
+    if (!this.props.listOfStreaming[this.state.currentShow - 1]) return;
     this.setState({ currentShow: this.state.currentShow - 1 });
   };
   nextPicture = () => {
-    if (!listOfStreaming[this.state.currentShow + 1]) return;
+    if (!this.props.listOfStreaming[this.state.currentShow + 1]) return;
     this.setState({ currentShow: this.state.currentShow + 1 });
   };
   launchVideo = () => {
@@ -135,6 +134,9 @@ class StreamingList extends Component {
     this.setState({ showVideo: false });
   };
   render = () => {
+    if (!this.props.listOfStreaming.length) {
+      return <div>LOADING</div>;
+    }
     return (
       <Wrapper>
         <div className="component-name">What to stream</div>
@@ -157,11 +159,14 @@ class StreamingList extends Component {
             <MovieButton
               onClick={() =>
                 this.props.history.push(
-                  "/movie/" + listOfStreaming[this.state.currentShow].id
+                  "/movie/" +
+                    this.props.listOfStreaming[this.state.currentShow]._id
                 )
               }
             >
-              <img src={listOfStreaming[this.state.currentShow].poster}></img>
+              <img
+                src={this.props.listOfStreaming[this.state.currentShow].poster}
+              ></img>
             </MovieButton>
           </ImageDiv>
           <VideoDiv>
@@ -171,11 +176,13 @@ class StreamingList extends Component {
                 <PlayCircleImg src="/whitePLayButton.png" />
               </div>
               <TitleShowDiv>
-                {listOfStreaming[this.state.currentShow].title}
+                {this.props.listOfStreaming[this.state.currentShow].title}
               </TitleShowDiv>
             </DivWithTheCircle>
             <img
-              src={listOfStreaming[this.state.currentShow].videoPoster}
+              src={
+                this.props.listOfStreaming[this.state.currentShow].videoPoster
+              }
               className="image-video"
               onClick={this.launchVideo}
             />
@@ -189,7 +196,7 @@ class StreamingList extends Component {
                 <iframe
                   width="1150"
                   height="560"
-                  src={listOfStreaming[this.state.currentShow].video}
+                  src={this.props.listOfStreaming[this.state.currentShow].video}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -198,7 +205,7 @@ class StreamingList extends Component {
             </Modal>
           </VideoDiv>
         </WrapperContentDiv>
-        {this.state.currentShow !== listOfStreaming.length - 1 && (
+        {this.state.currentShow !== this.props.listOfStreaming.length - 1 && (
           <NextButton onClick={this.nextPicture}>
             <svg
               width="24"
@@ -216,4 +223,8 @@ class StreamingList extends Component {
     );
   };
 }
-export default withRouter(StreamingList);
+let mapStateToProps = (state) => {
+  return { listOfStreaming: state.listOfStreaming };
+};
+let connectedStreamingList = connect(mapStateToProps)(StreamingList);
+export default withRouter(connectedStreamingList);

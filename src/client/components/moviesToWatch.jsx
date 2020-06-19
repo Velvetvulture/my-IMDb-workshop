@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import Modal from "@material-ui/core/Modal";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Checkout from "./Checkout.jsx";
-import { listOfMovies } from "../../Data.jsx";
 
 const MovieDiv = styled.div`
   display: grid;
@@ -177,7 +177,10 @@ class MoviesToWatch extends Component {
   // };
 
   render = () => {
-    const moviesToDisplay = listOfMovies.slice(
+    if (!this.props.listOfMovies.length) {
+      return <div>LOADING</div>;
+    }
+    const moviesToDisplay = this.props.listOfMovies.slice(
       this.state.firstMovie,
       this.state.lastMovie
     );
@@ -203,7 +206,7 @@ class MoviesToWatch extends Component {
             return (
               <MovieWrapper>
                 <MovieButton
-                  onClick={() => this.props.history.push("/movie/" + movie.id)}
+                  onClick={() => this.props.history.push("/movie/" + movie._id)}
                 >
                   <img src={movie.poster}></img>
                 </MovieButton>
@@ -234,7 +237,7 @@ class MoviesToWatch extends Component {
                         height="80%"
                         src={movie.poster}
                         onClick={() =>
-                          this.props.history.push("/movie/" + movie.id)
+                          this.props.history.push("/movie/" + movie._id)
                         }
                       ></ImageInTheModal>
                       <div>
@@ -255,7 +258,7 @@ class MoviesToWatch extends Component {
               </MovieWrapper>
             );
           })}
-          {this.state.lastMovie !== listOfMovies.length && (
+          {this.state.lastMovie !== this.props.listOfMovies.length && (
             <RightButton onClick={this.nextSlate}>
               <svg
                 width="24"
@@ -274,5 +277,8 @@ class MoviesToWatch extends Component {
     );
   };
 }
-
-export default withRouter(MoviesToWatch);
+let mapStateToProps = (state) => {
+  return { listOfMovies: state.listOfMovies };
+};
+let connectedMoviesToWatch = connect(mapStateToProps)(MoviesToWatch);
+export default withRouter(connectedMoviesToWatch);

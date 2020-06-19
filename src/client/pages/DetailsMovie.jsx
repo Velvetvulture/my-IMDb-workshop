@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
 import RibbonButton from "../components/RibbonButton.jsx";
@@ -193,7 +193,7 @@ class DetailsMovie extends Component {
   };
   render = () => {
     const {
-      id,
+      _id,
       stream,
       title,
       year,

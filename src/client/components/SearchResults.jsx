@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import React, { Component } from "react";
-import { listOfMovies, listOfStreaming } from "../../Data.jsx";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -40,6 +39,11 @@ const ActorsList = styled.div`
 `;
 function SearchResults(props) {
   const dispatch = useDispatch();
+  const listOfMovies = useSelector((state) => state.listOfMovies);
+  const listOfStreaming = useSelector((state) => state.listOfStreaming);
+  if (!listOfMovies.length && !listOfStreaming.length) {
+    return <div>LOADING</div>;
+  }
   const query = useSelector((state) => state.searchQuery);
   const results = listOfMovies.concat(listOfStreaming).filter((movie) => {
     return movie.title.toLowerCase().includes(query.toLowerCase());
@@ -61,7 +65,7 @@ function SearchResults(props) {
                 <MovieInfoDiv>
                   <Link
                     className="title-link"
-                    to={"/movie/" + movie.id}
+                    to={"/movie/" + movie._id}
                     onClick={handleClick}
                   >
                     {movie.title}

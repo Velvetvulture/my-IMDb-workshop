@@ -57,8 +57,8 @@ export default function GoogleSignIn() {
   const history = useHistory();
 
   const responseGoogleOk = (response) => {
-    console.log(response.Pt.pW);
-    dispatch({ type: "login" });
+    console.log("user name from response from Google:", response.Qt.nW);
+    dispatch({ type: "login-success", username: response.Qt.nW });
     history.push("/");
   };
   const responseGoogle = (response) => {

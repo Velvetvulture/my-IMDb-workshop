@@ -36,6 +36,36 @@ app.get("/newTrailers", (req, res) => {
       res.send(JSON.stringify({ success: true, newTrailers: data }));
     });
 });
+app.get("/streamingList", (req, res) => {
+  console.log("request to the streaming list");
+  dbo
+    .collection("listOfStreming")
+    .find({})
+    .toArray((err, data) => {
+      if (err) {
+        console.log("error", err);
+        res.send("fail");
+        return;
+      }
+      console.log("listOfStreaming", data);
+      res.send(JSON.stringify({ success: true, listOfStreaming: data }));
+    });
+});
+app.get("/listOfMovies", (req, res) => {
+  console.log("request to the list of movies to watch");
+  dbo
+    .collection("listOfMovies")
+    .find({})
+    .toArray((err, data) => {
+      if (err) {
+        console.log("error", err);
+        res.send("fail");
+        return;
+      }
+      console.log("listOfMovies", data);
+      res.send(JSON.stringify({ success: true, listOfMovies: data }));
+    });
+});
 // Your endpoints go before this line
 app.all("/*", (req, res, next) => {
   // needed for react router

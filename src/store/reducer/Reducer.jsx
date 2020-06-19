@@ -17,6 +17,12 @@ const reducer = (state, action) => {
   if (action.type === "newTrailers") {
     return { ...state, newTrailers: action.newTrailers };
   }
+  if (action.type === "StreamingList") {
+    return { ...state, listOfStreaming: action.listOfStreaming };
+  }
+  if (action.type === "listOfMovies") {
+    return { ...state, listOfMovies: action.listOfMovies };
+  }
   return state;
 };
 

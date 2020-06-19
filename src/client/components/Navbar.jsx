@@ -156,6 +156,7 @@ export default function PrimarySearchAppBar(props) {
   const [focus, setFocus] = useState(false);
   const isLoggedIn = useSelector((state) => state.loggedIn);
   const query = useSelector((state) => state.searchQuery);
+  const username = useSelector((state) => state.username);
   const dispatch = useDispatch();
   const history = useHistory();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -360,7 +361,7 @@ export default function PrimarySearchAppBar(props) {
                 onClick={handleProfileMenuOpen}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle /> {username}
               </IconButton>
             </div>
           ) : (

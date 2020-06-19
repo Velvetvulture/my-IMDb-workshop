@@ -86,7 +86,7 @@ class Watchlist extends Component {
                   <img height="150px" src={movie.poster} />
                 </PictureDiv>
                 <MovieInfoDiv>
-                  <Link className="title-link" to={"/movie/" + movie.id}>
+                  <Link className="title-link" to={"/movie/" + movie._id}>
                     {movie.title}
                   </Link>
                   <SubTitleBar>
